@@ -1,0 +1,10 @@
+<project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0"></entry_points>
+  </component>
+  <component IDEtalkID="8D6E51A19DC1BA4B58C8B897942E4F9B" name="IdProvider"></component>
+  <component 
+  project-jdk-type="JavaSDK" project-jdk-name="1.7" jdk-15="true" assert-keyword="true" languageLevel="JDK_1_7" version="2" name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/target/idea_output"></output>
+</component>
+</project>
