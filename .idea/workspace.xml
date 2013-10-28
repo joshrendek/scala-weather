@@ -9,8 +9,8 @@
     <file path="/Temperature.scala" changelist="15c65fde-f6cc-4d21-a415-47860551ef3f" time="1382982462861" ignored="false" />
     <file path="/TemperatureSpec.java" changelist="15c65fde-f6cc-4d21-a415-47860551ef3f" time="1382981525374" ignored="false" />
     <file path="/TemperatureSpec.scala" changelist="15c65fde-f6cc-4d21-a415-47860551ef3f" time="1382992615585" ignored="false" />
-    <file path="/CurrentWeather.scala" changelist="15c65fde-f6cc-4d21-a415-47860551ef3f" time="1382989852006" ignored="false" />
-    <file path="/CurrentWeatherSpec.scala" changelist="15c65fde-f6cc-4d21-a415-47860551ef3f" time="1382992982624" ignored="false" />
+    <file path="/CurrentWeather.scala" changelist="15c65fde-f6cc-4d21-a415-47860551ef3f" time="1382996071322" ignored="false" />
+    <file path="/CurrentWeatherSpec.scala" changelist="15c65fde-f6cc-4d21-a415-47860551ef3f" time="1382995458760" ignored="false" />
     <file path="/logback.xml" changelist="15c65fde-f6cc-4d21-a415-47860551ef3f" time="1382990362656" ignored="false" />
     <file path="/BetaMaxHelper.scala" changelist="15c65fde-f6cc-4d21-a415-47860551ef3f" time="1382992539236" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -84,11 +84,13 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CurrentWeather.scala" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="CurrentWeather.scala" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/scala/CurrentWeather.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                  <folding />
+                <state line="41" column="0" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.5557749">
+                  <folding>
+                    <element signature="e#0#56#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -142,21 +144,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CurrentWeatherSpec.scala" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="CurrentWeatherSpec.scala" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/scala/CurrentWeatherSpec.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="0" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="e#0#50#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/README.md">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                <state line="23" column="73" selection-start="685" selection-end="685" vertical-scroll-proportion="0.18045862">
                   <folding />
                 </state>
               </provider>
@@ -189,15 +180,15 @@
         <option value="$PROJECT_DIR$/LICENSE" />
         <option value="$PROJECT_DIR$/src/test/scala/TemperatureSpec.java" />
         <option value="$PROJECT_DIR$/src/main/scala/Temperature.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/CurrentWeather.scala" />
         <option value="$PROJECT_DIR$/src/logback.xml" />
         <option value="$PROJECT_DIR$/logback.xml" />
         <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/src/test/scala/BetaMaxHelper.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/TemperatureSpec.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/CurrentWeatherSpec.scala" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/test/scala/CurrentWeatherSpec.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/CurrentWeather.scala" />
       </list>
     </option>
   </component>
@@ -260,6 +251,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -297,6 +290,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala-weather" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala-weather" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -360,8 +371,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -660,7 +669,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/CurrentWeather.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="2" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -674,9 +685,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/scala/CurrentWeatherSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="4" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -730,13 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/CurrentWeather.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/BetaMaxHelper.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0">
@@ -746,24 +748,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/TemperatureSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
+        <state line="11" column="0" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="36" selection-start="35" selection-end="38" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/CurrentWeatherSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
+        <state line="23" column="73" selection-start="685" selection-end="685" vertical-scroll-proportion="0.18045862">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/CurrentWeather.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="41" column="0" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.5557749">
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

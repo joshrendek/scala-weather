@@ -21,7 +21,7 @@ class CurrentWeatherSpec extends FunSpec with ShouldMatchers {
   recorder.insertTape("OpenWeatherAPI.clearwater")
   proxyServer.start()
 
-  val weather = new CurrentWeather("Clearwater,FL")
+  val weather = new CurrentWeather("Clearwater,FL", recorder.getProxyPort)
 
   recorder.ejectTape()
   proxyServer.stop()
@@ -37,11 +37,11 @@ class CurrentWeatherSpec extends FunSpec with ShouldMatchers {
     }
 
     it("should have a sea level") {
-      assert(weather.sea_level == 1034.76)
+      assert(weather.sea_level == 1033.33)
     }
 
     it("should have a ground level") {
-      assert(weather.ground_level == 1034.14)
+      assert(weather.ground_level == 1032.88)
     }
 
     it("should have a sunrise and sunset") {
