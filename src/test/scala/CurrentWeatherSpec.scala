@@ -40,6 +40,11 @@ class CurrentWeatherSpec extends FunSpec with ShouldMatchers {
       assert(weather.sea_level == 1033.33)
     }
 
+    it("should have weather info") {
+      assert(weather.weather.size == 1)
+      assert(weather.weather(0).description == "Sky is Clear")
+    }
+
     it("should have a ground level") {
       assert(weather.ground_level == 1032.88)
     }

@@ -30,8 +30,11 @@ class CurrentWeather(val location: String, val _port: Integer = null) {
   private var _humidity: Option[Integer] = None
   private var _cloudiness: Option[Integer] = None
   private var _id: Integer = null
+  private var _weather : List[Weather] = null
 
   case class Wind(val speed: Double, val deg: Double)
+  case class Weather(val id : Integer, val main : String,
+                      val description : String, val icon : String)
 
   initWeatherData()
 
@@ -70,67 +73,43 @@ class CurrentWeather(val location: String, val _port: Integer = null) {
     _wind = new Wind((json \\ "wind" \\ "speed").extract[Double], (json \\ "wind" \\ "deg").extract[Double])
     _cloudiness = (json \\ "clouds" \\ "all").extractOpt[Integer]
     _id = (json \ "id").extract[Integer]
+    _weather = List[Weather]()
+    for( wn <- (json \\ "weather").extract[List[Map[String,String]]] ){
+      _weather ::= new Weather(wn("id").toInt, wn("main"), wn("description"), wn("icon"))
+    }
   }
 
-  def longitude = {
-    _longitude.get
-  }
+  def weather = { _weather }
 
-  def latitude = {
-    _latitude.get
-  }
+  def longitude = { _longitude.get }
 
-  def country = {
-    _country.get
-  }
+  def latitude = { _latitude.get }
 
-  def sunrise = {
-    new java.util.Date(_sunrise.get * 1000)
-  }
+  def country = { _country.get }
 
-  def sunset = {
-    new java.util.Date(_sunset.get * 1000)
-  }
+  def sunrise = { new java.util.Date(_sunrise.get * 1000) }
 
-  def temperature = {
-    _temperature
-  }
+  def sunset = { new java.util.Date(_sunset.get * 1000) }
 
-  def temperature_min = {
-    _temperature_min
-  }
+  def temperature = { _temperature }
 
-  def temperature_max = {
-    _temperature_max
-  }
+  def temperature_min = { _temperature_min }
 
-  def pressure = {
-    _pressure.get
-  }
+  def temperature_max = { _temperature_max }
 
-  def sea_level = {
-    _sea_level.get
-  }
+  def pressure = { _pressure.get }
 
-  def ground_level = {
-    _ground_level.get
-  }
+  def sea_level = { _sea_level.get }
 
-  def humidity = {
-    _humidity.get
-  }
+  def ground_level = { _ground_level.get }
 
-  def wind = {
-    _wind
-  }
+  def humidity = { _humidity.get }
 
-  def cloudiness = {
-    _cloudiness.get
-  }
+  def wind = { _wind }
 
-  def id = {
-    _id
-  }
+  def cloudiness = { _cloudiness.get }
+
+  def id = { _id }
 
 }
 
