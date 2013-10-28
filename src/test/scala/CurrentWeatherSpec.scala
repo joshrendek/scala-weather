@@ -1,3 +1,5 @@
+import co.freeside.betamax.proxy.jetty.ProxyServer
+import co.freeside.betamax.Recorder
 import org.scalatest.FunSpec
 import org.scalatest.matchers.ShouldMatchers
 import org.scalatest.matchers.ShouldMatchers._
@@ -14,7 +16,14 @@ import org.scalatest.FlatSpec
  * Copyright (c) 2013 Josh Rendek 
  */
 class CurrentWeatherSpec extends FunSpec with ShouldMatchers {
+  val recorder = new Recorder
+  val proxyServer = new ProxyServer(recorder)
+  recorder.insertTape("OpenWeatherAPI.clearwater")
+  proxyServer.start()
   val weather = new CurrentWeather("Clearwater,FL")
+  recorder.ejectTape()
+  proxyServer.stop()
+
   describe("requesting data") {
     it("should have latitude and longitude") {
       assert(weather.latitude == 27.9656)

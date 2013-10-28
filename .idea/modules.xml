@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea_modules/scala-weather-build.iml" filepath="$PROJECT_DIR$/.idea_modules/scala-weather-build.iml" >
-      </module>
-      <module fileurl="file://$PROJECT_DIR$/.idea_modules/scala-weather.iml" filepath="$PROJECT_DIR$/.idea_modules/scala-weather.iml" ></module>
+      <module fileurl="file://$PROJECT_DIR$/.idea_modules/scala-weather.iml" filepath="$PROJECT_DIR$/.idea_modules/scala-weather.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea_modules/scala-weather-build.iml" filepath="$PROJECT_DIR$/.idea_modules/scala-weather-build.iml" />
     </modules>
   </component>
 </project>
+

@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="SBT: uk.co.bigbeeconsultants:bee-client_2.10:0.21.6">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.ivy2/cache/uk.co.bigbeeconsultants/bee-client_2.10/jars/bee-client_2.10-0.21.6.jar!/"></root>
+      <root url="jar://$USER_HOME$/.ivy2/cache/uk.co.bigbeeconsultants/bee-client_2.10/jars/bee-client_2.10-0.21.6.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.ivy2/cache/uk.co.bigbeeconsultants/bee-client_2.10/docs/bee-client_2.10-0.21.6-javadoc.jar!/"></root>
+      <root url="jar://$USER_HOME$/.ivy2/cache/uk.co.bigbeeconsultants/bee-client_2.10/docs/bee-client_2.10-0.21.6-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.ivy2/cache/uk.co.bigbeeconsultants/bee-client_2.10/srcs/bee-client_2.10-0.21.6-sources.jar!/"></root>
+      <root url="jar://$USER_HOME$/.ivy2/cache/uk.co.bigbeeconsultants/bee-client_2.10/srcs/bee-client_2.10-0.21.6-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

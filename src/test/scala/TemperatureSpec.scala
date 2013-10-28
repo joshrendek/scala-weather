@@ -9,15 +9,7 @@ import org.scalatest.FunSpec;
  * Copyright (c) 2013 Josh Rendek
  */
 class TemperatureSpec extends FunSpec {
-  val recorder = new Recorder
-  val proxyServer = new ProxyServer(recorder)
-
-  recorder.insertTape("YouTubeVideo.apply")
-  proxyServer.start()
   val temp = new Temperature(298.0)
-  recorder.ejectTape()
-  proxyServer.stop()
-
 
   describe("initializing") {
     it("should have a kelvin value") {

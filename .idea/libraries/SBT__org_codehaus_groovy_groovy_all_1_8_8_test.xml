@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="SBT: org.codehaus.groovy:groovy-all:1.8.8:test">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.ivy2/cache/org.codehaus.groovy/groovy-all/jars/groovy-all-1.8.8.jar!/"></root>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.codehaus.groovy/groovy-all/jars/groovy-all-1.8.8.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.ivy2/cache/org.codehaus.groovy/groovy-all/docs/groovy-all-1.8.8-javadoc.jar!/"></root>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.codehaus.groovy/groovy-all/docs/groovy-all-1.8.8-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.ivy2/cache/org.codehaus.groovy/groovy-all/srcs/groovy-all-1.8.8-sources.jar!/"></root>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.codehaus.groovy/groovy-all/srcs/groovy-all-1.8.8-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
