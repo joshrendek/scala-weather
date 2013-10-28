@@ -12,11 +12,20 @@ Just open an issue on Github
 
 ```
   val weather = new CurrentWeather("Clearwater,FL")
+  weather.longitude // => -82.7998
+  weather.humidity // => 94
+  weather.temperature.toFahrenheit // => 86 
+  // There is also a .toCelsius method and the default data unit is Kelvin
+  weather.wind.speed // => 13mps
+  weather.wind.degrees // => 280
+  // + more, see CurrentWeather.scala
 ```
 
 # Running tests
 
+```
 sbt test
+```
 
 # Contributing / Editing
 
