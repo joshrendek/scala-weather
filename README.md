@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/joshrendek/scala-weather.png?branch=master)](https://travis-ci.org/joshrendek/scala-weather)
+[![Code Climate](https://codeclimate.com/github/joshrendek/scala-weather.png)](https://codeclimate.com/github/joshrendek/scala-weather)
 
 # scala-weather
 
