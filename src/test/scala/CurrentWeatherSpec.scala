@@ -20,7 +20,9 @@ class CurrentWeatherSpec extends FunSpec with ShouldMatchers {
   val proxyServer = new ProxyServer(recorder)
   recorder.insertTape("OpenWeatherAPI.clearwater")
   proxyServer.start()
+
   val weather = new CurrentWeather("Clearwater,FL")
+
   recorder.ejectTape()
   proxyServer.stop()
 

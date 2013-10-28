@@ -145,7 +145,7 @@
           <file leaf-file-name="CurrentWeatherSpec.scala" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/scala/CurrentWeatherSpec.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="20" column="47" selection-start="585" selection-end="585" vertical-scroll-proportion="0.18045862">
+                <state line="24" column="0" selection-start="664" selection-end="664" vertical-scroll-proportion="0.24027917">
                   <folding>
                     <element signature="e#0#50#0" expanded="true" />
                   </folding>
@@ -750,7 +750,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/CurrentWeatherSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="47" selection-start="585" selection-end="585" vertical-scroll-proportion="0.18045862">
+        <state line="24" column="0" selection-start="664" selection-end="664" vertical-scroll-proportion="0.24027917">
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
