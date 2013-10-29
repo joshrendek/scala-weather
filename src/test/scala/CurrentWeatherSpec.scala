@@ -37,7 +37,7 @@ class CurrentWeatherSpec extends FunSpec with ShouldMatchers {
     }
 
     it("should have a sea level") {
-      assert(weather.sea_level == 1033.33)
+      assert(weather.seaLevel == 1033.33)
     }
 
     it("should have weather info") {
@@ -46,7 +46,7 @@ class CurrentWeatherSpec extends FunSpec with ShouldMatchers {
     }
 
     it("should have a ground level") {
-      assert(weather.ground_level == 1032.88)
+      assert(weather.groundLevel == 1032.88)
     }
 
     it("should have a sunrise and sunset") {
@@ -56,8 +56,8 @@ class CurrentWeatherSpec extends FunSpec with ShouldMatchers {
 
     it("should have current, min, max temp") {
       assert(weather.temperature.toFahrenheit > 0)
-      assert(weather.temperature_max.toFahrenheit > 0)
-      assert(weather.temperature_min.toFahrenheit > 0)
+      assert(weather.temperatureMax.toFahrenheit > 0)
+      assert(weather.temperatureMin.toFahrenheit > 0)
     }
 
     it("should have pressure") {

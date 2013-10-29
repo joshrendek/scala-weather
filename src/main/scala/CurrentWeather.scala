@@ -23,11 +23,11 @@ class CurrentWeather(val location: String, val _port: Integer = null) {
   private var _sunrise: Option[Integer] = None
   private var _sunset: Option[Integer] = None
   private var _temperature: Temperature = null
-  private var _temperature_min: Temperature = null
-  private var _temperature_max: Temperature = null
+  private var _temperatureMin: Temperature = null
+  private var _temperatureMax: Temperature = null
   private var _pressure: Option[Double] = None
-  private var _sea_level: Option[Double] = None
-  private var _ground_level: Option[Double] = None
+  private var _seaLevel: Option[Double] = None
+  private var _groundLevel: Option[Double] = None
   private var _humidity: Option[Integer] = None
   private var _cloudiness: Option[Integer] = None
   private var _id: Integer = null
@@ -64,11 +64,11 @@ class CurrentWeather(val location: String, val _port: Integer = null) {
     _sunrise = (json \\ "sys" \\ "sunrise").extractOpt[Integer]
     _sunset = (json \\ "sys" \\ "sunset").extractOpt[Integer]
     _temperature = new Temperature((json \\ "main" \\ "temp").extract[Double])
-    _temperature_min = new Temperature((json \\ "main" \\ "temp_min").extract[Double])
-    _temperature_max = new Temperature((json \\ "main" \\ "temp_max").extract[Double])
+    _temperatureMin = new Temperature((json \\ "main" \\ "temp_min").extract[Double])
+    _temperatureMax = new Temperature((json \\ "main" \\ "temp_max").extract[Double])
     _pressure = (json \\ "main" \\ "pressure").extractOpt[Double]
-    _sea_level = (json \\ "main" \\ "sea_level").extractOpt[Double]
-    _ground_level = (json \\ "main" \\ "grnd_level").extractOpt[Double]
+    _seaLevel = (json \\ "main" \\ "sea_level").extractOpt[Double]
+    _groundLevel = (json \\ "main" \\ "grnd_level").extractOpt[Double]
     _humidity = (json \\ "main" \\ "humidity").extractOpt[Integer]
     _wind = new Wind((json \\ "wind" \\ "speed").extract[Double], (json \\ "wind" \\ "deg").extract[Double])
     _cloudiness = (json \\ "clouds" \\ "all").extractOpt[Integer]
@@ -98,15 +98,15 @@ class CurrentWeather(val location: String, val _port: Integer = null) {
 
   def temperature = { _temperature }
 
-  def temperature_min = { _temperature_min }
+  def temperatureMin = { _temperatureMin }
 
-  def temperature_max = { _temperature_max }
+  def temperatureMax = { _temperatureMax }
 
   def pressure = { _pressure.get }
 
-  def sea_level = { _sea_level.get }
+  def seaLevel = { _seaLevel.get }
 
-  def ground_level = { _ground_level.get }
+  def groundLevel = { _groundLevel.get }
 
   def humidity = { _humidity.get }
 
