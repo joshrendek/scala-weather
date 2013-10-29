@@ -74,7 +74,15 @@ class CurrentWeatherSpec extends FunSpec with ShouldMatchers {
     }
 
     it("should have cloudiness") {
-      assert(weather.cloudiness != None)
+      assert(weather.cloudiness >= 0)
+    }
+
+    it("should have a sunrise") {
+      assert(weather.sunrise.toString == "Mon Oct 28 07:40:14 EDT 2013")
+    }
+
+    it("should have a sunset") {
+      assert(weather.sunset.toString == "Mon Oct 28 18:49:36 EDT 2013")
     }
 
     it("should have an id") {

@@ -15,6 +15,7 @@ import org.json4s.Formats
  */
 class CurrentWeather(val location: String, val _port: Integer = null) {
 
+  implicit val formats = DefaultFormats
   private var _latitude: Option[Double] = None
   private var _longitude: Option[Double] = None
   private var _wind: Wind = null
@@ -41,23 +42,22 @@ class CurrentWeather(val location: String, val _port: Integer = null) {
 
   def initWeatherData() = {
     val url = new URL(List("http://api.openweathermap.org/data/2.5/weather?q=", location).mkString)
-    var json : JValue = null
-    if (_port != null) {
+    val httpClient = if(_port != null) {
       val proxyAddress = new InetSocketAddress("localhost", _port)
       val proxy = new Proxy(Proxy.Type.HTTP, proxyAddress)
       val config = Config(proxy = proxy)
-      val httpClient = new HttpClient(config)
-      val response: Response = httpClient.get(url)
-      val rawJson = response.body.asString
-      json = parse(rawJson)
-    }else{
-      val httpClient = new HttpClient
-      val response: Response = httpClient.get(url)
-      val rawJson = response.body.asString
-      json = parse(rawJson)
+      new HttpClient(config)
+    } else {
+      new HttpClient
     }
 
-    implicit val formats = DefaultFormats
+    val response: Response = httpClient.get(url)
+    val rawJson = response.body.asString
+    val json = parse(rawJson)
+    extractValuesFromJson(json)
+  }
+
+  def extractValuesFromJson(json : JValue) = {
     _latitude = (json \\ "coord" \\ "lat").extractOpt[Double]
     _longitude = (json \\ "coord" \\ "lon").extractOpt[Double]
     _country = (json \\ "sys" \\ "country").extractOpt[String]
@@ -73,10 +73,15 @@ class CurrentWeather(val location: String, val _port: Integer = null) {
     _wind = new Wind((json \\ "wind" \\ "speed").extract[Double], (json \\ "wind" \\ "deg").extract[Double])
     _cloudiness = (json \\ "clouds" \\ "all").extractOpt[Integer]
     _id = (json \ "id").extract[Integer]
+    _weather = extractWeatherData((json \\ "weather"))
+  }
+
+  def extractWeatherData(json : JValue) : List[Weather] = {
     _weather = List[Weather]()
-    for( wn <- (json \\ "weather").extract[List[Map[String,String]]] ){
+    for( wn <- json.extract[List[Map[String,String]]] ){
       _weather ::= new Weather(wn("id").toInt, wn("main"), wn("description"), wn("icon"))
     }
+    _weather
   }
 
   def weather = { _weather }
@@ -87,9 +92,9 @@ class CurrentWeather(val location: String, val _port: Integer = null) {
 
   def country = { _country.get }
 
-  def sunrise = { new java.util.Date(_sunrise.get * 1000) }
+  def sunrise = { new java.util.Date(_sunrise.get * 1000L) }
 
-  def sunset = { new java.util.Date(_sunset.get * 1000) }
+  def sunset = { new java.util.Date(_sunset.get * 1000L) }
 
   def temperature = { _temperature }
 
